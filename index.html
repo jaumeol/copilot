@@ -6,8 +6,8 @@
     <title>Starter HTML Page</title>
     <script>
         function calculateStats() {
-            // Create a random vector with ten values
-            let vector = Array.from({length: 10}, () => Math.random());
+            // Create a random vector with ten values, subtracting 1/2 to center around zero
+            let vector = Array.from({length: 10}, () => Math.random() - 0.5);
 
             // Calculate mean
             let mean = vector.reduce((a, b) => a + b, 0) / vector.length;
