@@ -7,7 +7,7 @@
     <script>
         function calculateStats() {
             // Create a random vector with ten values
-            let vector = Array.from({length: 10}, () => Math.random() * 100);
+            let vector = Array.from({length: 10}, () => Math.random());
 
             // Calculate mean
             let mean = vector.reduce((a, b) => a + b, 0) / vector.length;
