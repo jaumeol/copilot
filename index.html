@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starter HTML Page</title>
+    <script>
+        function calculateStats() {
+            // Create a random vector with ten values
+            let vector = Array.from({length: 10}, () => Math.random() * 100);
+
+            // Calculate mean
+            let mean = vector.reduce((a, b) => a + b, 0) / vector.length;
+
+            // Calculate standard deviation
+            let variance = vector.reduce((a, b) => a + Math.pow(b - mean, 2), 0) / vector.length;
+            let stdDev = Math.sqrt(variance);
+
+            // Display results
+            document.getElementById('results').innerText = `Mean: ${mean.toFixed(2)}, Standard Deviation: ${stdDev.toFixed(2)}`;
+        }
+    </script>
 </head>
 <body>
     <h1>Welcome to My Website</h1>
     <p>This is a starter HTML page.</p>
+    <button onclick="calculateStats()">Calculate Stats</button>
+    <p id="results"></p>
 </body>
 </html>
