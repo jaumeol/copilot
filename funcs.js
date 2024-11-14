@@ -13,6 +13,7 @@ function calculateStats() {
     document.getElementById('results').innerText = `Mean: ${mean.toFixed(2)}, Standard Deviation: ${stdDev.toFixed(2)}`;
 
     // Display vector components
+    
     const vectorList = document.getElementById('vector-list');
     vectorList.innerHTML = ''; // Clear previous list
     vector.forEach((value, index) => {
@@ -20,4 +21,6 @@ function calculateStats() {
         listItem.innerText = `Component ${index + 1}: ${value.toFixed(2)}`;
         vectorList.appendChild(listItem);
     });
+
+    
 }
